@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pic"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="2dp"
+            android:id="@+id/songname"
+
+            android:layout_marginBottom="50dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="62dp"
+            android:id="@+id/pic"
+            android:elevation="20dp"
+            android:layout_marginTop="97dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:src="@drawable/music" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:elevation="@dimen/cardview_compat_inset_shadow"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pause"
+                android:id="@+id/pause"
+                android:layout_marginTop="5dp"
+                />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/next"
+                android:layout_toRightOf="@id/pause"
+                android:layout_marginTop="15dp"
+                android:elevation="@dimen/cardview_compat_inset_shadow"
+                android:background="@drawable/next"
+                />
+
+            <Button
+                android:layout_width="40dp"
+                android:id="@+id/prev"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@id/pause"
+                android:elevation="@dimen/cardview_compat_inset_shadow"
+                android:background="@drawable/previous"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
